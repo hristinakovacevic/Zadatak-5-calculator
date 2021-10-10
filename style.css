@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark1: #fffffb;
+    --dark2: #eae3db;
+    --dark3: #181f32;
+    --dark4: #242D44;
+    --dark5: #3b4664;
+    --dark6: #647299;
+    --dark7: #d13f30;
+    
+    --light1: #eeeeee;
+    --light2: #e6e6e6;
+    --light3: #c5c0c0;
+    --light4: #36362c;
+    --light5: #378187;
+    --light6: #c85402;
+    --light7: #fffffb;
+
+    --purple1: #17062a;
+    --purple2: #1e0936;
+    --purple4: #331c4d;
+    --purple3: #56077c;
+    --purple5: #ffe53d;
+    --purple6: #00ded0;
+    --purple7: #fffffb;
+}
+body{
+    
+    font-family: 'Spartan', sans-serif;
+}
+.container{
+    background-color: var(--dark5);
+    font-family: 'Spartan', sans-serif;
+    height: 100vh;
+    color: var(--dark1);
+}
+.calculator{
+    padding: 7%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.themes{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.theme-options{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.theme-button{
+    height: 20px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: var(--dark3);
+    background-image: url('./images/Oval.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 69px;
+}
+input{
+    background-color: var(--dark3);
+    border-radius: 10px;
+    height: 12vh;
+    padding: 8%;
+    text-align: right;
+    font-size: 27px;
+    font-family: 'Spartan', sans-serif;
+    color: var(--dark1);
+    border: none;
+    width:86vw;
+   
+}
+.option:hover{
+    color: red;
+    cursor: pointer;
+}
+main{
+    background-color: var(--dark4);
+    border-radius: 10px;
+    height: 63vh;
+    padding: 4%;
+    margin-top: 21px;
+    
+    
+
+}
+.buttons{
+    height: 58vh;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 13px;
+    justify-content: center;
+    align-items: center;
+}
+ .num,
+ .operator, .dot, .del {
+    width: 60px;
+height: 64px;
+background: #EAE3DC;
+box-shadow: inset 0px -4px 0px #B3A497;
+border-radius: 5px;
+font-family: Spartan;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: -0.466667px;
+    color: #434A59;
+    border: none;
+
+}
+.del, .reset{
+    color: var(--dark2);
+    background: #647198;
+box-shadow: inset 0px -4px 0px #414E73;
+font-size: 16px;
+}
+.reset, .equal{
+    width: 60px;
+    height: 64px;
+    border-radius: 5px;
+    font-family: Spartan;
+    font-weight: bold;
+    color:var(--dark2);
+    border: none;
+    width: 133px;
+}
+.equal{
+    background: #D03F2F;
+box-shadow: inset 0px -4px 0px #93261A;
+border-radius: 5px;
+}
+/* ----------------------------------------------MEDIA----------------------------------------------- */
+@media(min-width:768px){
+
+    .container{
+        padding-top: 8%;
+    }
+    .calculator{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header{
+        width: 540px;
+        height: 44px;
+    }
+    input{
+        width: 540px;
+        height: 128px;
+        padding: 47px;
+        color: var(--dark1);
+    }
+     main{
+        padding: 46px;
+        height: 480px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    
+    
+ .buttons{
+     
+     height: 415px;
+     width: 446px;
+    }
+    .num,
+    .operator, .dot, .del {
+         width: 101px;
+        height: 64px;
+    } 
+
+.reset, .equal{
+    width: 216px;
+}
+}
+/* --------------------------------------TOGGLE THEMES-------------------------------------------------------- */
+
+.light{
+    background-color:var(--light2);
+    height: 100vh;
+}
+
+
+.light, .num,
+.operator, .dot{
+    color: var(--light4);
+}
+
+.light main{
+    background-color: var(--light3);
+}
+.light input{
+    background-color: var(--light1);
+    color: var(--light4);
+
+}
+.light .del {
+    background-color: var(--light5);
+    box-shadow: inset 0px -4px 0px #1B6066;
+    
+}
+.light .reset{
+    background-color: var(--light5);
+    box-shadow: inset 0px -4px 0px #1B6066;
+}
+.light .equal{
+    background-color: var(--light6);
+    box-shadow: inset 0px -4px 0px #873901;
+}
+.light .theme-button{
+    background-position: center;
+    background-color: var(--light3);
+}
+/* --------------------------------PURPLE--------------------------------------------- */
+.purple{
+    background-color:var(--purple1) ;
+    height: 100vh;
+}
+.purple main {
+    background-color: var(--purple2);
+}
+.purple .num, .purple .operator,
+   .purple .dot, .purple .del  {
+    color: var(--purple5);
+    background-color: #331c4d;
+    box-shadow: inset 0px -4px 0px #881C9E;
+}
+
+.purple input{
+    background-color: var(--purple2);
+    color: var(--purple5);
+}
+.purple header{
+    color: var(--purple5);
+}
+.purple .del, .purple .reset{
+    background-color: var(--purple4);
+    box-shadow: inset 0px -4px 0px var(--purple3);
+    color: var(--purple7);
+}
+
+.purple .equal{
+    background-color: var(--purple6);
+    box-shadow: inset 0px -4px 0px #6CF9F1;
+    color: black;
+}
+.purple .theme-button{
+    background-position: right;
+    background-color: var(--purple2);
+}
