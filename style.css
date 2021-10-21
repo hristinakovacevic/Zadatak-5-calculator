@@ -32,11 +32,14 @@
     --purple7: #fffffb;
 }
 body{
-    
+    background-color: var(--dark5);
     font-family: 'Spartan', sans-serif;
 }
 .container{
-    background-color: var(--dark5);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Spartan', sans-serif;
     height: 100vh;
     color: var(--dark1);
@@ -147,9 +150,7 @@ border-radius: 5px;
 /* ----------------------------------------------MEDIA----------------------------------------------- */
 @media(min-width:768px){
 
-    .container{
-        padding-top: 8%;
-    }
+    
     .calculator{
         padding: 0;
         display: flex;
