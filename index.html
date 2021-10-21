@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Calculator app</title>
+
+   
+    <style></style>
+  </head>
+  <body >
+    <div class="container">
+    <div class="calculator">
+      <header>
+          <h1>calc</h1>
+          <div class="themes">
+              <h3>Theme</h3>
+              <div class="theme-selector">
+                  <div class="theme-options">
+                      <p class="option">1</p>
+                      <p class="option">2</p>
+                      <p class="option">3</p>
+                  </div>
+              <div class="theme-button"></div>  
+              </div>
+          </div>
+        </header>
+<input type="text" id="input">
+      
+      <main>
+          <div class="buttons">
+              
+              <button class='num' onclick="calculate(7)">7</button>
+              <button class='num' onclick="calculate(8)">8</button>
+              <button class='num' onclick="calculate(9)">9</button>
+              <button class="del" onclick="del()">DEL</button>
+
+              <button class='num' onclick="calculate(4)">4</button>
+              <button class='num' onclick="calculate(5)">5</button>
+              <button class='num' onclick="calculate(6)">6</button>
+              <button class="operator" onclick="calculate('+')">+</button>
+
+              <button class='num' onclick="calculate(1)">1</button>
+              <button class='num' onclick="calculate(2)">2</button>
+              <button class='num' onclick="calculate(3)">3</button>
+              <button class="operator" onclick="calculate('-')">-</button>
+
+              <button class="dot" onclick="calculate('.')">.</button>
+              <button class='num' onclick="calculate(0)">0</button>
+              <button class="operator" onclick="calculate('/')">/</button>
+              <button class="operator" onclick="calculate('*')">x</button>
+              <button class="reset" onclick="reset()">RESET</button>
+              <button class="equal" onclick="Result()">=</button>
+          </div>
+         
+      </main>
+  </div>
+    </div>
+  <script src="script.js"></script>
+  </body>
+</html>
